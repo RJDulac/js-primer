@@ -1,18 +1,39 @@
-class Car {
-    constructor(brand, model, year) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
-    }
-    displayCarInformations() {
-        console.log(this.brand + ' ' + this.model + ' ' + this.year)
-    }
-}
+const Car = require('./Car');
+const CarService = require('./services/CarService');
+
+const carService = new CarService('SuperCars', 'Spain', 'Malaga');
+
+
 
 //creating instance of class
-const car1 = new Car('Ford', 'Focus', 2018);
-const car2 = new Car('Ford', 'Fiesta', 2000)
+const car1 = new Car();
+const car2 = new Car('Ford', 'Fiesta', 2000);
 
-car1.displayCarInformations();
+// car1.displayCarInformations();
 
 
+carService.addCar(car1);
+carService.addCar(car2);
+
+carService.displayAllCars();
+
+
+function getName(name) {
+    return name;
+}
+
+const getName2 = name => name;
+
+console.log(getName('Joe'));
+console.log(getName2('Brian'));
+
+// function displayPhilip() {
+//     console.log('Philip');
+// }
+// function displayName(callbackFunction) {
+//     callbackFunction();
+// }
+
+// displayName(displayPhilip);
+
+// displayPhilip();
