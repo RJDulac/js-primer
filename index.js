@@ -1,4 +1,5 @@
 const Car = require('./Car');
+const FancyCar = require('./FancyCar');
 const CarService = require('./services/CarService');
 
 const carService = new CarService('SuperCars', 'Spain', 'Malaga');
@@ -11,13 +12,17 @@ const car2 = new Car('Ford', 'Fiesta', 2000);
 const car3 = new Car('Fiat', 'Punto', 2011);
 const car4 = new Car('toyota', 'Yaris', 2003);
 
+const car5 = new FancyCar('mercedes', 'benz', 2018);
+car5.displayCarInformations();
+debugger;
+
 // car1.displayCarInformations();
 
 
-carService.addCar(car1);
-carService.addCar(car2);
-carService.addCar(car3);
-carService.addCar(car4);
+// carService.addCar(car1);
+// carService.addCar(car2);
+// carService.addCar(car3);
+// carService.addCar(car4);
 
 console.log(carService.getAllCars());
 // [...rest] = carService.getAllCars();
