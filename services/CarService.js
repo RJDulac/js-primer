@@ -14,11 +14,19 @@ class CarService {
     }
 
     addCar(car) {
-        this.carsToRepair.push(car);
+        // this.carsToRepair.push(car);
+
+        // if (car.brand === 'Toyota') {
+        //     console.log('I cannot add Toyota!');
+        // } else {
+        //     this.carsToRepair.push(car);
+        // }
+
+        car.brand === 'toyota' ? console.log('I cannot add Toyota!') : this.carsToRepair.push(car);
     }
 
     displayCustomName() {
-        console.log('I am a custom name function');
+        // console.log('I am a custom name function');
     }
     displayAllCars() {
         const self = this;
@@ -29,6 +37,9 @@ class CarService {
             this.displayCustomName();
             car.displayCarInformations();
         });
+    }
+    getAllCars() {
+        return this.carsToRepair;
     }
 }
 
